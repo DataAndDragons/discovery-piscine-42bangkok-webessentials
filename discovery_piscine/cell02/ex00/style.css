@@ -1,0 +1,14 @@
+table {
+    width: 100%;
+}
+.green-box, .red-box {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid black;
+}
+.green-box {
+    background-color: lightgreen;
+}
+.red-box {
+    background-color: red;
+}
