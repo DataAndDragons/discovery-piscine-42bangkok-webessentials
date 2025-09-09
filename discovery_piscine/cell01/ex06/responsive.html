@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table Exercise 05 now 6 responsive</title>
+    <style>
+        td {
+            width: 50%;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        table {
+            width: 100%;
+        }
+        
+        @media screen and (max-width: 600px) {
+            td {
+                display: block; 
+                width: 100%; 
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+    
+        <tr>
+            <td style="background-color: lightgreen;">
+                This is the first box.
+            </td>
+
+            <td style="background-color: red;">
+                This is the second box . It's a red maybe
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
