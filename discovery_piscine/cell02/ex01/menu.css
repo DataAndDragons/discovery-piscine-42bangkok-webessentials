@@ -1,41 +1,62 @@
-/* --- Basic Setup --- */
 body {
-    font-family: sans-serif; /* A simple, standard font */
+    font-family: sans-serif;
+    background-color: #f4f4f4; /* A light grey background makes the menu stand out */
 }
 
+/* This styles the main menu bar */
 ul {
-    list-style: none;          /* Removes the bullet points */
+    list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #f0f0f0; /* A light grey for the menu background */
+    background-color: #333; /* A nice dark grey for the menu bar */
 }
 
-/* --- Main Menu Items --- */
+/* This makes the main menu items sit side-by-side */
 .main-menu > ul > li {
-    display: inline-block;     /* Puts the menu items side-by-side */
-    position: relative;        /* REQUIRED for the dropdown to work */
+    display: inline-block;
+    position: relative;
 }
 
-/* --- All Links --- */
+/* This styles ALL the links in your menu */
 a {
-    text-decoration: none;     /* Removes the underline from links */
-    color: #333;               /* A dark grey for the text */
-    padding: 15px;             /* Adds clickable space around the text */
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+}
+
+/* This styles the links in the MAIN menu bar */
+.main-menu > ul > li > a {
+    color: white; /* White text looks great on a dark background */
+}
+
+/* This is the hover effect for the MAIN menu */
+.main-menu > ul > li > a:hover {
+    background-color: #555; /* A slightly lighter grey for the hover effect */
+}
+
+
+/* --- The Drop-down Part --- */
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: white; /* A clean white background for the dropdown */
+    border: 1px solid #ccc;  /* A simple border */
+    min-width: 160px; /* Give the dropdown some width */
+}
+
+/* This styles the links INSIDE the dropdown */
+.sub-menu a {
+    color: #333; /* Dark text for the dropdown links */
+}
+
+/* This is the hover effect for the links INSIDE the dropdown */
+.sub-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* This is the magic rule that shows the dropdown on hover */
+.dropdown:hover .sub-menu {
     display: block;
 }
 
-/* --- Hover Effect --- */
-a:hover {
-    background-color: #e0e0e0; /* A slightly darker grey when you hover */
-}
-
-/* --- The Drop-Down Logic --- */
-.sub-menu {
-    display: none;             /* Hides the dropdown by default */
-    position: absolute;        /* REQUIRED: Makes the dropdown float over the page */
-    border: 1px solid #ccc;    /* Adds a simple border around the dropdown */
-}
-
-.dropdown:hover .sub-menu {
-    display: block;            /* Shows the dropdown when you hover on its parent */
-}

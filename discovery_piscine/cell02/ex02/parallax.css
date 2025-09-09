@@ -1,0 +1,35 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.parallax-section {
+    
+    min-height: 100vh;
+    background-attachment: fixed; 
+    background-size: cover;       
+}
+
+.image1 {
+    background-image: url("https://static.wikia.nocookie.net/doraemon/images/7/74/Mitsuo_Suwa.jpg/revision/latest?cb=20150918095157&path-prefix=en");
+}
+
+.image2 {
+    background-image: url("https://static.wikia.nocookie.net/perman/images/a/a2/H.png/revision/latest/scale-to-width-down/1000?cb=20180530061851");
+}
+
+.content-section {
+    padding: 50px;
+    background-color: black;
+    color: white;
+}
+
+.caption {
+    text-align: center;
+    padding-top: 45vh;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 4px black; 
+}
+

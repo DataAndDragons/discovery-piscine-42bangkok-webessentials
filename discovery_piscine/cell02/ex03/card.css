@@ -1,0 +1,51 @@
+body {
+    font-family: sans-serif; 
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.card {
+    width: 300px;
+    margin: 20px auto; 
+    background-color: white;
+    border: 1px solid #ccc; 
+    text-align: center;
+}
+
+
+.card > img {
+    width: 100%; /
+}
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    margin: 0;
+}
+
+.card-content p {
+    color: #777;
+}
+
+table {
+    width: 100%;
+}
+.social-icons img {
+    width: 20px; 
+    margin: 5px; 
+}
+.contact-btn {
+    display: block;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.contact-btn:hover {
+    background-color: #555;
+}
