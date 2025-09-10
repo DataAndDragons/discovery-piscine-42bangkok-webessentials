@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery Calculator</title>
 
-    <!-- STEP 1: Add the jQuery library. This line is essential. -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <!-- The CSS styling does not need to change. -->
+  
     <style>
         body { 
             font-family: sans-serif; 
@@ -51,25 +51,24 @@
        
         $(document).ready(function() {
 
-            
+       
             setInterval(function() {
                 alert('Please, use me...');
             }, 30000);
 
-           
+
             $('#calculator').on('submit', function(event) {
-               
+            
                 event.preventDefault();
 
                 const leftValue = $('#left-operand').val();
                 const rightValue = $('#right-operand').val();
                 const operator = $('#operator').val();
 
-              
+      
                 const leftNum = parseInt(leftValue, 10);
                 const rightNum = parseInt(rightValue, 10);
 
-                
                 if (isNaN(leftNum) || isNaN(rightNum) || leftNum < 0 || rightNum < 0) {
                     alert('Error :(');
                     return; 
@@ -81,7 +80,7 @@
                     return; 
                 }
 
-              
+    
                 let result;
                 switch (operator) {
                     case '+': result = leftNum + rightNum; break;
@@ -91,7 +90,7 @@
                     case '%': result = leftNum % rightNum; break;
                 }
 
-               
+     
                 alert(result);
                 console.log(result);
             });
