@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex02 calculator im dying</title>
+    
+    <style>
+        body {
+            display: flex; 
+            justify-content: center; 
+            padding-top: 50px; 
+            background-color: white;
+        }
+        .calculator-card {
+            background-color: white;
+            padding: 20px;
+        }
+        input, select { 
+            font-size: 1.2em; 
+            padding: 5px; 
+            margin: 0 5px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-card">
+        <form id="calculator">
+            <input type="text" id="left-operand">
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" id="right-operand">
+            <input type="submit" value="Try me!">
+        </form>
+    </div>
+
+    <script>
+        
+        setInterval(function() {
+            alert('Please, use me...');
+        }, 30000);
+
+        const form = document.getElementById('calculator');
+        const leftInput = document.getElementById('left-operand');
+        const rightInput = document.getElementById('right-operand');
+        const operatorSelect = document.getElementById('operator');
+
+        form.addEventListener('submit', function(event) {
+            
+            event.preventDefault();
+
+          
+            const leftValue = leftInput.value;
+            const rightValue = rightInput.value;
+            const operator = operatorSelect.value;
+
+          
+            const leftNum = parseInt(leftValue, 10);
+            const rightNum = parseInt(rightValue, 10);
+
+            if (isNaN(leftNum) || isNaN(rightNum) || leftNum < 0 || rightNum < 0) {
+                alert('Error :(');
+                return; 
+            }
+
+            if ((operator === '/' || operator === '%') && rightNum === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return; 
+            }
+
+            let result;
+            switch (operator) {
+                case '+':
+                    result = leftNum + rightNum;
+                    break;
+                case '-':
+                    result = leftNum - rightNum;
+                    break;
+                case '*':
+                    result = leftNum * rightNum;
+                    break;
+                case '/':
+                    result = leftNum / rightNum;
+                    break;
+                case '%':
+                    result = leftNum % rightNum;
+                    break;
+            }
+
+            alert(result);
+            console.log(result);
+        });
+    </script>
+    
+</body>
+</html>
+

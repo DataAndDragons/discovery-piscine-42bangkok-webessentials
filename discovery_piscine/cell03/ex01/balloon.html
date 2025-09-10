@@ -23,50 +23,46 @@
             background-color: red;
             border-radius: 50%; 
             cursor: pointer;
-            /* transition: all 0.3s ease;  */
         }
     </style>
 </head>
 <body>
 
-    <!-- This is the balloon element -->
     <div id="balloon"></div>
 
-    <!-- All the JavaScript code now lives inside this <script> tag -->
     <script>
-        // --- 1. SETUP: Get the balloon and define variables ---
+
         const balloon = document.getElementById('balloon');
         let currentSize = 200;
         let colorIndex = 0; // 0=red, 1=green, 2=blue
         const colors = ['red', 'green', 'blue'];
 
-        // --- 2. THE CLICK EVENT ---
         balloon.addEventListener('click', function() {
             currentSize += 10;
 
-            // Explode if size > 420px
+         
             if (currentSize > 420) {
                 currentSize = 200;
             }
 
-            // Change to the next color in the sequence
+            
             colorIndex = (colorIndex + 1) % colors.length;
             updateBalloonStyle();
         });
 
-        // --- 3. THE MOUSE LEAVE EVENT ---
+       
         balloon.addEventListener('mouseleave', function() {
-            // Only shrink if the size is greater than the minimum
+            
             if (currentSize > 200) {
                 currentSize -= 5;
             }
             
-            // Change to the PREVIOUS color in the sequence
+       
             colorIndex = (colorIndex - 1 + colors.length) % colors.length;
             updateBalloonStyle();
         });
 
-        // --- 4. A HELPER FUNCTION to update the style ---
+        
         function updateBalloonStyle() {
             balloon.style.width = currentSize + 'px';
             balloon.style.height = currentSize + 'px';
