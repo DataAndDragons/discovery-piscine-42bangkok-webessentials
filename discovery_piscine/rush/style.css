@@ -1,0 +1,61 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#about p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.1rem; 
+    line-height: 1.7; 
+    color: #555;       
+}
+#about h3 {
+    background-image: linear-gradient(to right, #4784F9, #3A66F9, #6DD5FA, #9C47F9);
+
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+}
+body {
+    scroll-behavior: smooth;
+}
+section {
+    padding: 80px 0;
+}
+nav {
+    background-color: purple;
+}
+nav a {
+    color: #fff !important;
+}
+.navbar .nav-link:hover {
+    background-color: #a975c0;
+    transform: scale(1.1); 
+}
+.showcase li {
+    margin-bottom: 10px;
+}
+footer {
+    background: purple;
+    color: #aaa;
+    padding: 20px;
+    text-align: center;
+}
+.about-photo {
+    max-width: 300px;
+    border: 5px solid black;
+}
+
+.education-logo {
+    float: left;
+    margin-right: 1rem;
+    height: 80px;
+    width: auto;
+}
+.competition-cert {
+    max-height: 250px; 
+    margin-top: 1rem; 
+}
